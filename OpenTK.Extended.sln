@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0305D2D1-DE8E-4DF7-BCE4-C40239ED9915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK.Extended", "src\OpenTK.Extended\OpenTK.Extended.csproj", "{2EEED81D-5E1D-4AA8-A1D4-443BC6C21E0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{053D9CB0-0C73-4D07-9E7D-4E1881E2B2DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{359E00A8-56B2-409D-A0E0-E30A23BF17FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK.Extended.Demo", "OpenTK.Extended.Demo\OpenTK.Extended.Demo.csproj", "{37D67762-6506-440B-9EB4-8ABBE698D592}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F09E8234-E14F-40B1-B34D-5059547465D0}"
+ProjectSection(SolutionItems) = preProject
+	.gitignore = .gitignore
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EEED81D-5E1D-4AA8-A1D4-443BC6C21E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEED81D-5E1D-4AA8-A1D4-443BC6C21E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEED81D-5E1D-4AA8-A1D4-443BC6C21E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEED81D-5E1D-4AA8-A1D4-443BC6C21E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37D67762-6506-440B-9EB4-8ABBE698D592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D67762-6506-440B-9EB4-8ABBE698D592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D67762-6506-440B-9EB4-8ABBE698D592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D67762-6506-440B-9EB4-8ABBE698D592}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EEED81D-5E1D-4AA8-A1D4-443BC6C21E0E} = {0305D2D1-DE8E-4DF7-BCE4-C40239ED9915}
+		{37D67762-6506-440B-9EB4-8ABBE698D592} = {359E00A8-56B2-409D-A0E0-E30A23BF17FD}
+	EndGlobalSection
+EndGlobal
