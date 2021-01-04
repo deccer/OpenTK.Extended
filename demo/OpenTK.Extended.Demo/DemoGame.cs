@@ -1,4 +1,4 @@
-﻿using OpenTK.Graphics.ES11;
+﻿using OpenTK.Graphics.OpenGL4;
 using OpenTK.Windowing.Common;
 
 namespace OpenTK.Extended.Demo
