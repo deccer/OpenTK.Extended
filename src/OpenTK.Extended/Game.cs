@@ -1,4 +1,7 @@
 ﻿using System;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using OpenTK.Extended.Graphics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 
@@ -6,8 +9,11 @@ namespace OpenTK.Extended
 {
     public class Game : IDisposable
     {
-        protected Game(GameSettings gameSettings)
+        protected Game(ILogger logger, IServiceProvider serviceProvider, GameSettings gameSettings)
         {
+            Logger = logger;
+
+            ServiceProvider = serviceProvider;
             Window = new GameWindow(GameWindowSettings.Default, gameSettings._nativeWindowSettings);
             Window.Load += Load;
             Window.Unload += Unload;
@@ -24,6 +30,18 @@ namespace OpenTK.Extended
                 Window.Size = windowSize;
             }
         }
+
+        protected ILogger Logger { get; }
+
+        protected Camera Camera { get; set; }
+
+        protected IInputLayoutFactory InputLayoutFactory => ServiceProvider.GetService<IInputLayoutFactory>();
+
+        protected IMeshFactory MeshFactory => ServiceProvider.GetService<IMeshFactory>();
+
+        protected IServiceProvider ServiceProvider { get; }
+
+        protected IShaderFactory ShaderFactory => ServiceProvider.GetService<IShaderFactory>();
 
         protected GameWindow Window { get; }
 
@@ -43,7 +61,6 @@ namespace OpenTK.Extended
 
         protected virtual void Unload()
         {
-
         }
 
         protected virtual void Update(FrameEventArgs e)
